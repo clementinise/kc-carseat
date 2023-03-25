@@ -7,7 +7,7 @@ author 'Clementinise'
 name 'KC Car Seat'
 description 'Allow players to enter a vehicle through any door'
 github 'https://github.com/clementinise/kc-carseat'
-version '1.0'
+version '1.1'
 
 shared_scripts {
 	'locales/*.lua',

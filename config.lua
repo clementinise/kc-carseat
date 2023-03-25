@@ -2,8 +2,8 @@ Config                              = Config or {}
 
 -- Base
 Config.WaitForDoubleInput           = 300       -- Longer wait times allow for more time to double press (Milliseconds)
-Config.Distance                     = 3.0       -- The distance from the vehicle beyond which the function should not activate
-Config.FacingOnly                   = true      -- Should it only detect cars in front of the player when attempting to enter them? This can be helpful when close to two cars, but it may occasionally be inaccurate
+Config.Distance                     = 6.0       -- The distance from the vehicle beyond which the function should not activate
+Config.FacingOnly                   = false     -- Should it only detect cars in front of the player when attempting to enter them? This can be helpful when close to two cars, but it may occasionally be inaccurate
 
 -- Locale
 Config.Language						= 'en'		-- Currently Available: fr, en
