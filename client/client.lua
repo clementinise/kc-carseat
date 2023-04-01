@@ -109,7 +109,7 @@ local function EnteringCar()
                 print("Distance from "..(i + 1).."th seat: "..distance)
             end
         end
-    end*
+    end
 
     if Config.Debug then
         print("---------------------")
