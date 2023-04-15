@@ -1,4 +1,4 @@
-# kc-carseat [![Release](https://img.shields.io/badge/Release-V%201.1-blue)](https://github.com/clementinise/kc-carseat/releases/latest)
+# kc-carseat [![Release](https://img.shields.io/badge/Release-V%201.2-blue)](https://github.com/clementinise/kc-carseat/releases/latest)
 
 **Allow players to enter a vehicle through any door - [kc-carseat on cfx.re forum](https://forum.cfx.re/t/standalone-kc-carseat/5051810)** 
 
