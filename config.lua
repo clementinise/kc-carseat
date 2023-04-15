@@ -1,9 +1,10 @@
 Config                              = Config or {}
 
 -- Base
-Config.WaitForDoubleInput           = 300       -- Longer wait times allow for more time to double press (Milliseconds)
+Config.WaitForEnterInput            = 300       -- Longer wait times allow for more time to double press, in milliseconds. If you don't want to use this feature, set it to 0
+Config.WaitForExitInput             = 200       -- Longer wait times allow for more time to double press, in milliseconds. If you don't want to use this feature, set it to 0
 Config.Distance                     = 6.0       -- The distance from the vehicle beyond which the function should not activate
-Config.FacingOnly                   = false     -- Should it only detect cars in front of the player when attempting to enter them? This can be helpful when close to two cars, but it may occasionally be inaccurate
+Config.CheckForMovements            = true      -- Should it detects if the player presses any move key (S, D, A except Z) like in regular GTA when entering cars?
 
 -- Locale
 Config.Language						= 'en'		-- Currently Available: fr, en
