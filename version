@@ -1,3 +1,11 @@
+<1.2>
+- Added check to prevent players from sitting in the same spot as someone else if the seat is already taken
+- Added long press to enter a vehicle will now help to access some extra seats (Example: `fbi2` exterior seats)
+- Added double press to exit the vehicle will now let the engine running
+- Added long press to exit the vehicle will now let the engine running and keep the door open
+- Added more debug prints
+- Fixed players should no longer get stuck entering/leaving the vehicle
+- Fixed sitting in the passenger seat will now stop the player from repeatedly attempting to sit in the driver's seat
 <1.1>
 - Entering any car should now work as expected
 <1.0>
