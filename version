@@ -1,3 +1,6 @@
+<1.2.1>
+- New Config: "Config.LeaveEngineStaysRunning". Should the engine stay running when a player exits a vehicle, regardless of whether they long/double press or not?
+- Bikes should now work correctly
 <1.2>
 - Added check to prevent players from sitting in the same spot as someone else if the seat is already taken
 - Added long press to enter a vehicle will now help to access some extra seats (Example: `fbi2` exterior seats)
