@@ -20,7 +20,7 @@ local function CheckMoves()
 end
 
 local function GetNumberOfVehicleSeats(vehicle)
-    local seats, numberOfSeats = { "seat_dside_f", "seat_dside_r", "seat_dside_r1", "seat_dside_r2", "seat_dside_r3", "seat_dside_r4", "seat_dside_r5", "seat_dside_r6", "seat_dside_r7", "seat_pside_f", "seat_pside_r", "seat_pside_r1", "seat_pside_r2", "seat_pside_r3", "seat_pside_r4", "seat_pside_r5", "seat_pside_r6", "seat_pside_r7" }, 0
+    local seats, numberOfSeats = { "seat_f", "seat_dside_f", "seat_r", "seat_dside_r", "seat_dside_r1", "seat_dside_r2", "seat_dside_r3", "seat_dside_r4", "seat_dside_r5", "seat_dside_r6", "seat_dside_r7", "seat_pside_f", "seat_pside_r", "seat_pside_r1", "seat_pside_r2", "seat_pside_r3", "seat_pside_r4", "seat_pside_r5", "seat_pside_r6", "seat_pside_r7" }, 0
 
     for _, v in pairs(seats) do
         if GetEntityBoneIndexByName(vehicle, v) ~= -1 then
@@ -32,7 +32,7 @@ local function GetNumberOfVehicleSeats(vehicle)
 end
 
 local function GetNumberOfVehicleRegularSeats(vehicle)
-    local seats, numberOfSeats = { "seat_dside_f", "seat_dside_r", "seat_pside_f", "seat_pside_r" }, 0
+    local seats, numberOfSeats = { "seat_f", "seat_dside_f", "seat_r", "seat_dside_r", "seat_pside_f", "seat_pside_r" }, 0
 
     for _, v in pairs(seats) do
         if GetEntityBoneIndexByName(vehicle, v) ~= -1 then
@@ -202,7 +202,7 @@ local function LeavingCar(veh)
 
     if Config.Debug then print("Result: "..(ExitDoublePressed and "Double Press" or ExitControlPressed > 14 and "Long Press" or "Normal Press")) end
 
-    if ExitDoublePressed then
+    if ExitDoublePressed or Config.LeaveEngineStaysRunning then
         SetVehicleEngineOn(veh, true, true, false)
         TaskLeaveVehicle(ply, veh, 0)
     elseif ExitControlPressed > 14 then
@@ -221,7 +221,7 @@ RegisterCommand('entercar', function()
 
     if IsPedInAnyVehicle(PlayerPedId()) then
         local veh = GetVehiclePedIsIn(PlayerPedId())
-        if Config.WaitForExitInput ~= 0 then LeavingCar(veh) end
+        if Config.WaitForExitInput ~= 0 or Config.LeaveEngineStaysRunning then LeavingCar(veh) end
     else
         local veh = GetVehiclePedIsTryingToEnter(PlayerPedId())
         EnteringCar(veh)
